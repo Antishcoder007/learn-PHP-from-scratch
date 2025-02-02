@@ -12,11 +12,11 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 ## 📅 Week 1: PHP Basics
 ✅ **Goal:** Understand PHP syntax, basic programming concepts, and how PHP interacts with HTML.
 
-### **[Day 1: Introduction to PHP](#day-1-introduction-to-php)**
-- What is PHP?
-- Installing XAMPP/WAMP/LAMP for local development
-- Writing your first PHP script (`echo`, `phpinfo()`)
-- Running PHP scripts in a browser
+### **[Day 1: Introduction to PHP](#introduction-to-php)**
+- [What is PHP?](what-is-PHP?)
+- [Installing XAMPP/WAMP/LAMP for local development](#Installing-XAMPP/WAMP/LAMP-for-local-development)
+- [Writing your first PHP script](#Writing-Your-First-PHP-Script) (`echo`, `phpinfo()`)
+- [Running PHP scripts in a browser](#Running-PHP-scripts-in-a-browser)
 
 ### **Day 2: PHP Syntax & Variables**
 - PHP tags (`<?php ?>`)
