@@ -15,7 +15,7 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 ### **Day 1: Introduction to PHP**
 - What is PHP?
 - Installing XAMPP/WAMP/LAMP for local development
-- Writing your first PHP script (`echo`, `phpinfo()`)
+- Writing your first PHP script (`echo`, `phpinfo()`) `#ffffff`
 - Running PHP scripts in a browser
 
 ### **Day 2: PHP Syntax & Variables**
@@ -143,3 +143,77 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 After completing this roadmap, challenge yourself by building a **Personal Blog System** or a **Mini E-commerce Website** to showcase your PHP skills.
 
 🌟 **Happy Coding!** 🚀
+
+----
+
+# Introduction to PHP
+
+## 1️⃣ What is PHP?
+PHP (**Hypertext Preprocessor**) is a popular **server-side scripting language** primarily used for web development. It enables developers to create **dynamic and interactive web pages**.
+
+### 🔹 Key Features of PHP:
+- ✅ Open-source and free to use.
+- ✅ Works on multiple platforms (**Windows, Linux, macOS**).
+- ✅ Supports databases like **MySQL, PostgreSQL**, etc.
+- ✅ Easily integrates with **HTML, CSS, and JavaScript**.
+- ✅ Executes on the **server** and sends the output to the client’s browser.
+
+### 💡 Example:
+```php
+<?php
+    echo "Hello, World!";
+?>
+```
+**Output:** `Hello, World!` in a web browser.
+
+---
+
+## 2️⃣ Installing XAMPP/WAMP/LAMP for Local Development
+Since PHP is a **server-side** language, you need a **local server environment** to run PHP scripts on your computer. The most commonly used PHP development stacks are:
+
+- ✅ **XAMPP** (Windows, macOS, Linux) *(Recommended for Beginners)*
+- ✅ **WAMP** (Windows)
+- ✅ **LAMP** (Linux)
+
+### 🔹 Steps to Install **XAMPP**:
+1. **Download** XAMPP from [Apache Friends](https://www.apachefriends.org/).
+2. **Install and Open** XAMPP Control Panel.
+3. **Start Apache** (for PHP) and **MySQL** (for databases).
+
+---
+
+## 3️⃣ Writing Your First PHP Script
+Once XAMPP/WAMP/LAMP is installed, let's create and run a simple **PHP script**.
+
+### 🔹 Steps to Write Your First PHP Script:
+1. **Open** the `htdocs` folder (inside the XAMPP directory).
+2. **Create a new file:** `first.php`
+3. **Write the following code:**
+```php
+<?php
+    echo "Welcome to PHP!";
+?>
+```
+4. **Save the file.**
+
+---
+
+## 4️⃣ Running PHP Scripts in a Browser
+Now, let's execute the PHP script in your browser.
+
+### 🔹 Steps:
+1. **Open XAMPP Control Panel** → Start **Apache**.
+2. **Open a browser** and type:
+```
+http://localhost/first.php
+```
+3. **Press Enter** and see the output:
+```
+Welcome to PHP!
+```
+
+### 💡 Alternative Method *(Without XAMPP)*:
+use an **Online PHP Compiler** to test simple scripts.
+
+### 🎯 Congratulations! 🎯
+You've successfully set up **PHP** and executed your first script. Keep learning and coding! 🚀
