@@ -18,11 +18,12 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 - [Writing your first PHP script](#3%EF%B8%8F⃣-writing-your-first-php-script) (`echo`, `phpinfo()`)
 - [Running PHP scripts in a browser](#4%EF%B8%8F⃣-running-php-scripts-in-a-browser)
 
-### **Day 2: PHP Syntax & Variables**
-- PHP tags (`<?php ?>`)
-- Variables and data types *(String, Integer, Float, Boolean, Array, Object)*
-- Constants (`define()`, `const`)
-- PHP comments
+### **[Day 2](#day-2): PHP Syntax & Variables**
+- [PHP tags](#1%EF%B8%8F⃣-php-tags-php-) (`<?php ?>`)
+- [Variables](#3%EF%B8%8F⃣-php-data-types
+) and [data types](#2%EF%B8%8F⃣-variables-in-php) *(String, Integer, Float, Boolean, Array, Object)*
+- [Constants](#4%EF%B8%8F⃣-constants-in-php-define--const) (`define()`, `const`)
+- [PHP comments](#5%EF%B8%8F⃣-php-comments)
 
 ### **Day 3: Operators in PHP**
 - Arithmetic Operators *(+, -, *, /, %)*
@@ -218,3 +219,145 @@ use an **Online PHP Compiler** to test simple scripts.
 
 ### 🎯 Congratulations! 🎯
 You've successfully set up **PHP** and executed your first script. Keep learning and coding! 🚀
+
+---
+---
+# Day 2: 
+
+## PHP Syntax & Variables
+## 1️⃣ PHP Tags (`<?php ?>`)
+Every PHP script starts and ends with PHP tags, which tell the server where the PHP code begins and ends.
+
+### 🔹 Example:
+```php
+<?php
+    echo "Hello, PHP!";
+?>
+```
+### ✅ Key Points:
+- PHP code is enclosed within `<?php ?>`.
+- PHP statements end with a **semicolon (`;`)**.
+- The **`echo`** statement prints output to the screen.
+
+---
+
+## 2️⃣ Variables in PHP
+A variable is used to store data, such as numbers or text, which can be reused in a script.
+
+### ✅ Variable Rules:
+- Starts with a **`$` sign** (e.g., `$name`).
+- Must start with a **letter** or **underscore (`_`)**.
+- Cannot start with a **number**.
+- **Case-sensitive** (`$age` and `$AGE` are different).
+
+### 🔹 Example:
+```php
+<?php
+    $name = "John";
+    $age = 25;
+    echo "My name is " . $name . " and I am " . $age . " years old.";
+?>
+```
+### 🔹 Output:
+```
+My name is John and I am 25 years old.
+```
+
+---
+
+## 3️⃣ PHP Data Types
+PHP supports various **data types**, which define the type of value a variable can hold.
+
+| Data Type | Example |
+|-----------|---------|
+| **String** | "Hello, PHP!" |
+| **Integer** | `25, -5, 1000` |
+| **Float** | `3.14, -1.5, 0.99` |
+| **Boolean** | `true, false` |
+| **Array** | `["Apple", "Banana", "Mango"]` |
+| **Object** | `new Car("BMW")` |
+
+### 🔹 Example:
+```php
+<?php
+    $string = "Hello, PHP!";
+    $integer = 100;
+    $float = 99.99;
+    $boolean = true;
+    $array = array("Apple", "Banana", "Mango");
+    
+    echo "String: " . $string . "<br>";
+    echo "Integer: " . $integer . "<br>";
+    echo "Float: " . $float . "<br>";
+    echo "Boolean: " . $boolean . "<br>";
+    echo "Array: " . implode(", ", $array) . "<br>";
+?>
+```
+### 🔹 Output:
+```
+String: Hello, PHP!
+Integer: 100
+Float: 99.99
+Boolean: 1
+Array: Apple, Banana, Mango
+```
+✅ **`implode()`** converts an array to a string.
+
+---
+
+## 4️⃣ Constants in PHP (`define()` & `const`)
+Constants are like variables, but their value **cannot be changed** once defined.
+
+### **Using `define()` (Recommended)**
+```php
+<?php
+    define("SITE_NAME", "MyPHPWebsite");
+    echo "Welcome to " . SITE_NAME;
+?>
+```
+### 🔹 Output:
+```
+Welcome to MyPHPWebsite
+```
+
+### **Using `const` (Used inside classes)**
+```php
+<?php
+    const PI = 3.1416;
+    echo "Value of PI: " . PI;
+?>
+```
+### 🔹 Output:
+```
+Value of PI: 3.1416
+```
+
+---
+
+## 5️⃣ PHP Comments
+Comments are used to **write notes** or **disable code execution**.
+
+### **Types of Comments:**
+
+### ✅ Single-line comment (`//` or `#`)
+```php
+<?php
+    // This is a single-line comment
+    # Another single-line comment
+    echo "PHP is fun!";
+?>
+```
+
+### ✅ Multi-line comment (`/* ... */`)
+```php
+<?php
+    /* This is a multi-line comment
+       It spans multiple lines */
+    echo "Learning PHP!";
+?>
+```
+
+---
+
+## 🎯 Congratulations! 🎯
+You’ve learned **PHP Syntax, Variables, Data Types, Constants, and Comments**. Keep coding! 🚀
