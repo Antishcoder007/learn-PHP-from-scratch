@@ -24,6 +24,7 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 ) and [data types](#2%EF%B8%8F⃣-variables-in-php) *(String, Integer, Float, Boolean, Array, Object)*
 - [Constants](#4%EF%B8%8F⃣-constants-in-php-define--const) (`define()`, `const`)
 - [PHP comments](#5%EF%B8%8F⃣-php-comments)
+- [practices Questions](practice-questions.md#day-2)
 
 ### **[Day 3](#day-3-operators-in-php-1): Operators in PHP**
 - [Arithmetic Operators](#1%EF%B8%8F%E2%83%A3-arithmetic-operators) *(+, -, *, /, %)*
