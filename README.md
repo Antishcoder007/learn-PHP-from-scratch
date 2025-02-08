@@ -25,17 +25,17 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 - [Constants](#4%EF%B8%8F⃣-constants-in-php-define--const) (`define()`, `const`)
 - [PHP comments](#5%EF%B8%8F⃣-php-comments)
 
-### **Day 3: Operators in PHP**
-- Arithmetic Operators *(+, -, *, /, %)*
-- Comparison Operators *(==, !=, >, <, >=, <=)*
-- Logical Operators *(&&, ||, !)*
-- Assignment Operators
+### **[Day 3](#day-3-operators-in-php-1): Operators in PHP**
+- [Arithmetic Operators](#1%EF%B8%8F%E2%83%A3-arithmetic-operators) *(+, -, *, /, %)*
+- [Comparison Operators](#2%EF%B8%8F⃣-comparison-operators) *(==, !=, >, <, >=, <=)*
+- [Logical Operators](#3%EF%B8%8F⃣-logical-operators) *(&&, ||, !)*
+- [Assignment Operators](#4%EF%B8%8F⃣-assignment-operators)
 
-### **Day 4: Conditional Statements**
-- `if`, `else`, `elseif`
-- `switch` statements
+### **[Day 4](#day-4-conditional-statements-in-php): Conditional Statements**
+- [`if`](#-if-statement), [`else`](#-if-else-statement), [`elseif`](#-if-elseif-else-statement)
+- [`switch`](#2-switch-statement) statements
 
-### **Day 5: Loops**
+### **[Day 5](): Loops**
 - `for`, `while`, `do-while`
 - `foreach` for arrays
 
@@ -361,3 +361,284 @@ Comments are used to **write notes** or **disable code execution**.
 
 ## 🎯 Congratulations! 🎯
 You’ve learned **PHP Syntax, Variables, Data Types, Constants, and Comments**. Keep coding! 🚀
+
+---
+---
+# Day 3: Operators in PHP
+
+## 1️⃣ Arithmetic Operators
+Arithmetic operators are used to perform mathematical operations on numbers.
+
+| Operator | Description | Example | Result |
+|----------|------------|---------|--------|
+| + | Addition | `5 + 3` | `8` |
+| - | Subtraction | `10 - 4` | `6` |
+| * | Multiplication | `6 * 2` | `12` |
+| / | Division | `10 / 2` | `5` |
+| % | Modulus (Remainder) | `7 % 3` | `1` |
+
+### Example:
+```php
+<?php
+    $a = 10;
+    $b = 5;
+    
+    echo "Addition: " . ($a + $b) . "<br>";
+    echo "Subtraction: " . ($a - $b) . "<br>";
+    echo "Multiplication: " . ($a * $b) . "<br>";
+    echo "Division: " . ($a / $b) . "<br>";
+    echo "Modulus: " . ($a % $b) . "<br>";
+?>
+```
+**Output:**
+```
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+```
+
+## 2️⃣ Comparison Operators
+Comparison operators compare two values and return `true` (1) or `false` (0).
+
+| Operator | Description | Example | Result |
+|----------|------------|---------|--------|
+| == | Equal | `$x == $y` | true if `$x` is equal to `$y` |
+| != | Not equal | `$x != $y` | true if `$x` is not equal to `$y` |
+| > | Greater than | `$x > $y` | true if `$x` is greater than `$y` |
+| < | Less than | `$x < $y` | true if `$x` is less than `$y` |
+| >= | Greater than or equal to | `$x >= $y` | true if `$x` is greater than or equal to `$y` |
+| <= | Less than or equal to | `$x <= $y` | true if `$x` is less than or equal to `$y` |
+
+### Example:
+```php
+<?php
+    $x = 15;
+    $y = 10;
+
+    echo "Is x equal to y? " . ($x == $y) . "<br>";
+    echo "Is x not equal to y? " . ($x != $y) . "<br>";
+    echo "Is x greater than y? " . ($x > $y) . "<br>";
+    echo "Is x less than or equal to y? " . ($x <= $y) . "<br>";
+?>
+```
+**Output:**
+```
+Is x equal to y? 
+Is x not equal to y? 1
+Is x greater than y? 1
+Is x less than or equal to y? 
+```
+(Note: `true` is displayed as `1`, and `false` is empty.)
+
+## 3️⃣ Logical Operators
+Logical operators are used to combine multiple conditions.
+
+| Operator | Description | Example | Result |
+|----------|------------|---------|--------|
+| && | AND (Both conditions must be true) | `$x > 5 && $x < 20` | true if both conditions are true |
+| \|\| | OR (At least one condition must be true) | `$x > 10 || $x < 20` | true if at least one condition is true |
+| ! | NOT (Reverses the result) | `!($x > 5)` | true if `$x > 5` is false |
+
+### Example:
+```php
+<?php
+    $a = 8;
+    $b = 15;
+
+    echo "AND Operator: " . ($a > 5 && $b < 20) . "<br>";
+    echo "OR Operator: " . ($a > 10 || $b < 20) . "<br>";
+    echo "NOT Operator: " . !($a > 10) . "<br>";
+?>
+```
+**Output:**
+```
+AND Operator: 1
+OR Operator: 1
+NOT Operator: 1
+```
+
+## 4️⃣ Assignment Operators
+Assignment operators are used to assign values to variables.
+
+| Operator | Example | Equivalent To |
+|----------|---------|--------------|
+| = | `$x = 5` | `$x = 5` |
+| += | `$x += 3` | `$x = $x + 3` |
+| -= | `$x -= 2` | `$x = $x - 2` |
+| *= | `$x *= 4` | `$x = $x * 4` |
+| /= | `$x /= 2` | `$x = $x / 2` |
+| %= | `$x %= 3` | `$x = $x % 3` |
+
+### Example:
+```php
+<?php
+    $num = 10;
+
+    $num += 5; // Equivalent to $num = $num + 5
+    echo "After += : " . $num . "<br>";
+
+    $num -= 3; // Equivalent to $num = $num - 3
+    echo "After -= : " . $num . "<br>";
+
+    $num *= 2; // Equivalent to $num = $num * 2
+    echo "After *= : " . $num . "<br>";
+
+    $num /= 2; // Equivalent to $num = $num / 2
+    echo "After /= : " . $num . "<br>";
+
+    $num %= 4; // Equivalent to $num = $num % 4
+    echo "After %= : " . $num . "<br>";
+?>
+```
+**Output:**
+```
+After += : 15
+After -= : 12
+After *= : 24
+After /= : 12
+After %= : 0
+```
+---
+---
+# Day 4: Conditional Statements in PHP
+
+Conditional statements in PHP allow a program to execute different code blocks based on conditions. They help in making dynamic decisions within a script.
+
+## 1 if, else, and elseif Statements
+These statements check conditions and execute code based on whether the condition is true or false.
+
+### 🔹 if Statement
+Executes a block of code only if the condition is true.
+
+#### Syntax:
+```php
+if (condition) {
+    // Code to execute if condition is true
+}
+```
+#### Example:
+```php
+<?php
+    $age = 20;
+
+    if ($age >= 18) {
+        echo "You are eligible to vote.";
+    }
+?>
+```
+#### Output:
+```
+You are eligible to vote.
+```
+
+### 🔹 if-else Statement
+Executes one block if the condition is true, otherwise executes another block.
+
+#### Syntax:
+```php
+if (condition) {
+    // Code if condition is true
+} else {
+    // Code if condition is false
+}
+```
+#### Example:
+```php
+<?php
+    $temperature = 30;
+
+    if ($temperature > 25) {
+        echo "It's a hot day!";
+    } else {
+        echo "It's a cool day.";
+    }
+?>
+```
+#### Output:
+```
+It's a hot day!
+```
+
+### 🔹 if-elseif-else Statement
+Allows checking multiple conditions.
+
+#### Syntax:
+```php
+if (condition1) {
+    // Code if condition1 is true
+} elseif (condition2) {
+    // Code if condition2 is true
+} else {
+    // Code if all conditions are false
+}
+```
+#### Example:
+```php
+<?php
+    $score = 85;
+
+    if ($score >= 90) {
+        echo "Grade: A";
+    } elseif ($score >= 75) {
+        echo "Grade: B";
+    } elseif ($score >= 50) {
+        echo "Grade: C";
+    } else {
+        echo "Grade: F (Fail)";
+    }
+?>
+```
+#### Output:
+```
+Grade: B
+```
+
+## 2 switch Statement
+The `switch` statement is used when you have multiple conditions to check against a single value.
+
+#### Syntax:
+```php
+switch (variable) {
+    case value1:
+        // Code to execute if variable == value1
+        break;
+    case value2:
+        // Code to execute if variable == value2
+        break;
+    default:
+        // Code to execute if no case matches
+}
+```
+#### Example:
+```php
+<?php
+    $day = "Monday";
+
+    switch ($day) {
+        case "Monday":
+            echo "Start of the work week!";
+            break;
+        case "Friday":
+            echo "Weekend is coming!";
+            break;
+        case "Sunday":
+            echo "Enjoy your weekend!";
+            break;
+        default:
+            echo "It's a regular day.";
+    }
+?>
+```
+#### Output:
+```
+Start of the work week!
+```
+
+### 🔹 switch vs if-elseif-else
+✅ Use `if-elseif-else` when conditions involve complex expressions.
+✅ Use `switch` when checking a variable against multiple values.
+
+---
+🚀 Keep coding and mastering PHP! Stay tuned for more. Happy Learning! 😊
