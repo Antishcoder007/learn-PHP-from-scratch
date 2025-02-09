@@ -643,3 +643,331 @@ Start of the work week!
 
 ---
 🚀 Keep coding and mastering PHP! Stay tuned for more. Happy Learning! 😊
+
+---
+
+---
+
+# 🚀 Day 5: Loops in PHP
+
+Loops in PHP allow you to execute a block of code multiple times based on a condition. They are essential for handling repetitive tasks such as iterating over arrays, processing user input, or fetching database records.
+---
+
+## 🔄 1️⃣ for Loop
+The **for** loop is used when the number of iterations is known beforehand.
+
+### 🔹 Syntax:
+```php
+for (initialization; condition; increment/decrement) {
+    // Code to execute
+}
+```
+
+### 🔹 Example: Print numbers from 1 to 5
+```php
+<?php
+    for ($i = 1; $i <= 5; $i++) {
+        echo "Number: $i <br>";
+    }
+?>
+```
+✅ **Output:**
+```
+Number: 1  
+Number: 2  
+Number: 3  
+Number: 4  
+Number: 5  
+```
+
+---
+
+## 🔄 2️⃣ while Loop
+The **while** loop executes as long as the condition is true. It is useful when the number of iterations is not known in advance.
+
+### 🔹 Syntax:
+```php
+while (condition) {
+    // Code to execute
+}
+```
+
+### 🔹 Example: Print numbers from 1 to 5
+```php
+<?php
+    $i = 1;
+    while ($i <= 5) {
+        echo "Number: $i <br>";
+        $i++;
+    }
+?>
+```
+✅ **Output:**
+```
+Number: 1  
+Number: 2  
+Number: 3  
+Number: 4  
+Number: 5  
+```
+
+---
+
+## 🔄 3️⃣ do-while Loop
+The **do-while** loop is similar to while, but it executes the code **at least once**, even if the condition is false.
+
+### 🔹 Syntax:
+```php
+do {
+    // Code to execute
+} while (condition);
+```
+
+### 🔹 Example: Print numbers from 1 to 5
+```php
+<?php
+    $i = 1;
+    do {
+        echo "Number: $i <br>";
+        $i++;
+    } while ($i <= 5);
+?>
+```
+✅ **Output:**
+```
+Number: 1  
+Number: 2  
+Number: 3  
+Number: 4  
+Number: 5  
+```
+
+### 🔹 Example: Demonstrating at least one execution
+```php
+<?php
+    $x = 10;
+    do {
+        echo "Executed once!";
+    } while ($x < 5);
+?>
+```
+✅ **Output:**
+```
+Executed once!
+```
+(Even though `$x < 5` is false, the loop still runs once.)
+
+---
+
+## 🔄 4️⃣ foreach Loop (For Arrays)
+The **foreach** loop is specifically designed for iterating over arrays.
+
+### 🔹 Syntax:
+```php
+foreach ($array as $value) {
+    // Code to execute
+}
+```
+
+### 🔹 Example: Iterate through an indexed array
+```php
+<?php
+    $colors = array("Red", "Green", "Blue");
+    foreach ($colors as $color) {
+        echo "$color <br>";
+    }
+?>
+```
+✅ **Output:**
+```
+Red  
+Green  
+Blue  
+```
+
+### 🔹 Example: Iterate through an associative array
+```php
+<?php
+    $person = array("Name" => "John", "Age" => 25, "City" => "New York");
+    foreach ($person as $key => $value) {
+        echo "$key: $value <br>";
+    }
+?>
+```
+✅ **Output:**
+```
+Name: John  
+Age: 25  
+City: New York  
+```
+
+---
+🚀 Keep coding and exploring PHP loops! 🔥
+📌 **Follow me on GitHub for more PHP learning resources!** 👨‍💻🚀
+
+---
+
+---
+
+# Day 6: Arrays in PHP 🚀
+
+Arrays in PHP allow you to store multiple values in a single variable, making data management and manipulation more efficient. Let's explore the different types of arrays and some useful functions! 🔥
+
+---
+
+## 📌 1. Types of Arrays in PHP
+
+### 🔹 Indexed Arrays (Numeric Keys)
+An indexed array stores elements with numeric indices (starting from 0).
+
+#### ✅ Creating an Indexed Array:
+```php
+<?php
+    $fruits = array("Apple", "Banana", "Cherry");
+    echo $fruits[0]; // Output: Apple
+?>
+```
+
+#### ✅ Looping Through an Indexed Array:
+```php
+<?php
+    $colors = ["Red", "Green", "Blue"];
+    foreach ($colors as $color) {
+        echo "$color <br>";
+    }
+?>
+```
+📝 **Output:**
+```
+Red  
+Green  
+Blue  
+```
+
+---
+
+### 🔹 Associative Arrays (Key-Value Pairs)
+Associative arrays use custom keys instead of numeric indices.
+
+#### ✅ Creating an Associative Array:
+```php
+<?php
+    $person = array("Name" => "John", "Age" => 25, "City" => "New York");
+    echo $person["Name"]; // Output: John
+?>
+```
+
+#### ✅ Looping Through an Associative Array:
+```php
+<?php
+    foreach ($person as $key => $value) {
+        echo "$key: $value <br>";
+    }
+?>
+```
+📝 **Output:**
+```
+Name: John  
+Age: 25  
+City: New York  
+```
+
+---
+
+### 🔹 Multidimensional Arrays (Arrays Inside Arrays)
+Multidimensional arrays contain one or more arrays within them.
+
+#### ✅ Creating a Multidimensional Array:
+```php
+<?php
+    $students = array(
+        array("Alice", 85, "A"),
+        array("Bob", 78, "B"),
+        array("Charlie", 92, "A+")
+    );
+    echo $students[1][0]; // Output: Bob
+?>
+```
+
+#### ✅ Looping Through a Multidimensional Array:
+```php
+<?php
+    foreach ($students as $student) {
+        echo "Name: $student[0], Marks: $student[1], Grade: $student[2] <br>";
+    }
+?>
+```
+📝 **Output:**
+```
+Name: Alice, Marks: 85, Grade: A  
+Name: Bob, Marks: 78, Grade: B  
+Name: Charlie, Marks: 92, Grade: A+  
+```
+
+---
+
+## 🔥 2. Useful Array Functions in PHP
+
+### 🔹 Adding Elements: `array_push()`
+```php
+<?php
+    $fruits = ["Apple", "Banana"];
+    array_push($fruits, "Cherry", "Mango");
+    print_r($fruits);
+?>
+```
+📝 **Output:**
+```
+Array ( [0] => Apple [1] => Banana [2] => Cherry [3] => Mango )
+```
+
+### 🔹 Removing Last Element: `array_pop()`
+```php
+<?php
+    $fruits = ["Apple", "Banana", "Cherry"];
+    array_pop($fruits);
+    print_r($fruits);
+?>
+```
+📝 **Output:**
+```
+Array ( [0] => Apple [1] => Banana )
+```
+
+### 🔹 Counting Elements: `count()`
+```php
+<?php
+    $fruits = ["Apple", "Banana", "Cherry"];
+    echo count($fruits); // Output: 3
+?>
+```
+
+### 🔹 Sorting an Array: `sort()`
+```php
+<?php
+    $numbers = [4, 2, 8, 1];
+    sort($numbers);
+    print_r($numbers);
+?>
+```
+📝 **Output:**
+```
+Array ( [0] => 1 [1] => 2 [2] => 4 [3] => 8 )
+```
+
+### 🔹 Converting String to Array: `explode()`
+```php
+<?php
+    $text = "Apple,Banana,Cherry";
+    $fruits = explode(",", $text);
+    print_r($fruits);
+?>
+```
+📝 **Output:**
+```
+Array ( [0] => Apple [1] => Banana [2] => Cherry )
+```
+---
+📌 **Next Step:** Explore **array_merge()**, **array_filter()**, and advanced PHP array functions. Stay tuned for Day 7! 🚀
+
+📢 **Follow me on GitHub for more updates!** 😃
