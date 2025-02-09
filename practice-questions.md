@@ -184,77 +184,162 @@
 #### Ans:
 ```php
   <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
+    $i = 10;
+    if($i % 2 ==0)
+      echo "the $i is even ";
+    else
+      echo "the $i is odd "
   ?>
 ```
 #### output:
 ```
-  city is Jaipur
+    the 10 is even
 ```
 ---
 ### 6️⃣ Write a script to compare two user-input values using comparison operators.
 #### Ans:
 ```php
   <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
+    $userinput1 = "hello";
+    $userinput2 = "Hello World";
+    if($userinput1 == $userinput2)
+      echo "$userinput1 and $userinput2 are equal";
+    else
+      echo "not equal";
   ?>
 ```
 #### output:
 ```
-  city is Jaipur
+  not equal
 ```
 ---
 ### 7️⃣ Create a program that checks if a user is eligible to vote (age >= 18).
 #### Ans:
 ```php
   <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
+    $age = 20;
+    if($age >= 18)
+      echo "eligible to vote";
+    else
+      echo "Not eligible to vote"
   ?>
 ```
 #### output:
 ```
-  city is Jaipur
+  eligible to vote
 ```
 ---
 ### 8️⃣ Write a PHP program that calculates the area of a rectangle using variables.
 #### Ans:
 ```php
-  <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
-  ?>
+<?PHP
+  $base = 20;
+  $height = 15;
+  $area = 1/2 * $base * $height;
+  echo "the area of Triangle $area";
+?>
 ```
 #### output:
 ```
-  city is Jaipur
+  the area of Triangle 150
 ```
 ---
 ### 9️⃣ Use logical operators to check if a year is a leap year.
 #### Ans:
 ```php
-  <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
-  ?>
+<?PHP
+  $n=2024;
+  if(($n % 4 == 0 && $n % 100 != 0) || ($n % 400 == 0)){
+    echo "$n is leap year";
+  }else{
+    echo "$n is not leap year";
+  }
+?>
 ```
 #### output:
 ```
-  city is Jaipur
+  2024 is leap year
 ```
 ---
 ### 🔟 Write a PHP script that determines whether a given number is positive, negative, or zero.
 #### Ans:
 ```php
-  <?PHP
-    $city = Jaipur;
-    echo "city is ".$city;
-  ?>
+<?PHP
+  $n =-4;
+  if ($n < 0)
+    echo "$n is negative";
+  elseif($n > 0)
+    echo "$n is positive";
+  else
+    echo "zero";
+?>
 ```
 #### output:
 ```
-  city is Jaipur
+  -4 is negative
 ```
 ---
+---
+# Day 4️⃣ 
+## ✅ **Practice Questions**
+### 1️⃣ Use `if-elseif-else` to assign grades (A, B, C, F) based on marks.
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+### 2️⃣ Create a switch statement that prints the name of the day based on a number (1 = Monday, 2 = Tuesday, etc.).
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+
+### 3️⃣ Develop a PHP script that categorizes a person's BMI (Underweight, Normal, Overweight, Obese).
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+### 4️⃣ Use `switch` to create a program that displays messages for different traffic light colors (Red, Yellow, Green).
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+### 5️⃣ Write a PHP script to check if a given character is a vowel or consonant using `switch`.
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+### 6️⃣ Use `if-elseif-else` to determine which season it is based on a given month number (1-12).
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
