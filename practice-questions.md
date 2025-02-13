@@ -282,64 +282,127 @@
 ---
 # Day 4️⃣ 
 ## ✅ **Practice Questions**
-### 1️⃣ Use `if-elseif-else` to assign grades (A, B, C, F) based on marks.
+### 1️⃣ Use `if-else if-else` to assign grades (A, B, C, F) based on marks.
 #### Ans:
 ```php
 <?PHP
+  $n=65; //marks obtain 
+  if ($n>=80){
+    echo "A";
+	}elseif ($n<80 && $n>=65) {
+    echo "B";
+	}elseif ($n<65 && $n>=50) {
+    echo "C";
+	}else {
+    echo "F";
+	}
 ?>
 ```
 #### output:
 ```
-
+B
 ```
 ### 2️⃣ Create a switch statement that prints the name of the day based on a number (1 = Monday, 2 = Tuesday, etc.).
 #### Ans:
 ```php
 <?PHP
+$n = 5;
+switch($n){
+    case 1:
+      echo "Monday";
+      break;
+    case 2:
+      echo "Tuesday";
+      break;
+    case 3:
+      echo "Wednesday";
+      break;
+    case 4:
+      echo "Thursday";
+      break;
+    case 5:
+      echo "Friday";
+      break;
+    case 6:
+      echo "Saturday";
+      break;
+    case 7:
+      echo "Sunday";
+      break;
+    default:
+      echo "not is days";
+}
 ?>
 ```
 #### output:
 ```
-
+Friday
 ```
 
 ### 3️⃣ Develop a PHP script that categorizes a person's BMI (Underweight, Normal, Overweight, Obese).
 #### Ans:
 ```php
 <?PHP
+$h=173; // height in cm
+#w=70; // weight in kg
+$h = $h / 100;
+
+  $result = round($w / ($h * $h));
+  if ($result < 18.5){
+    echo "Underweight";
+  }elseif ( $result <= 24.9) {
+    echo "Normal";
+  }elseif ($result <= 29.9) {
+    echo "Overweight";
+  }else{
+    echo "Obese";
+  }
 ?>
 ```
 #### output:
 ```
-
+Normal
 ```
 ### 4️⃣ Use `switch` to create a program that displays messages for different traffic light colors (Red, Yellow, Green).
 #### Ans:
 ```php
 <?PHP
+$n = "Red";
+switch($n){
+  case "Red":
+    echo "Stop";
+    break;
+  case "Yellow":
+    echo "SLow down";
+    break;
+  case "Green":
+    echo "Ready to go";
+    break;
+  default:
+    echo "no colour";
+}
 ?>
 ```
 #### output:
 ```
-
+Stop
 ```
 ### 5️⃣ Write a PHP script to check if a given character is a vowel or consonant using `switch`.
 #### Ans:
 ```php
 <?PHP
+$h = 'e';
+switch ($h) {
+    case ($h=='a' || $h=='e' || $h=='i' || $h=='o' || $h=='u'):
+      echo "vowel";
+      break;
+    default:
+      echo "consonent";
+      break;
+  }
 ?>
 ```
 #### output:
 ```
-
-```
-### 6️⃣ Use `if-elseif-else` to determine which season it is based on a given month number (1-12).
-#### Ans:
-```php
-<?PHP
-?>
-```
-#### output:
-```
-
+vowel
 ```
