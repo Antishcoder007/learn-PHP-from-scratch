@@ -397,7 +397,7 @@ switch ($h) {
       echo "vowel";
       break;
     default:
-      echo "consonent";
+      echo "consonant";
       break;
   }
 ?>
@@ -405,4 +405,152 @@ switch ($h) {
 #### output:
 ```
 vowel
+```
+---
+
+# Day 5️⃣
+## ✅ **Practice Questions**
+---
+### 1️⃣ Write a PHP script using a `for` loop to print numbers from `1` to `100`.
+#### Ans:
+```php
+<?PHP
+for ($i=1;$i<=100;$i++){
+	echo $i." ";
+}
+?>
+```
+#### output:
+```
+1 2 3 4 5 6 7 8 9 10 11 12 ..... 98 99 100
+```
+### 2️⃣ Create a `while` loop that prints the first 10 `odd` numbers.
+#### Ans:
+```php
+<?PHP
+$i=1;
+while ($i<=20){
+      if ($i%2!=0) {
+          echo $i." ";
+      }
+      $i++;
+}
+?>
+```
+#### output:
+```
+1 3 5 7 9 11 13 15 17 19
+```
+### 3️⃣ Write a `do-while` loop that prints numbers from `5` to `1`.
+#### Ans:
+```php
+<?PHP
+$i=5;
+while ($i>0){
+     echo $i." ";
+     $i--;
+}
+?>
+```
+#### output:
+```
+5 4 3 2 1
+```
+### 4️⃣ Use a `for` loop to find the sum of numbers from `1` to `50`.
+#### Ans:
+```php
+<?PHP
+$rel=0;
+for($i=1;$i<=50;$i++){
+    $rel += $i;
+}
+echo $rel." ";
+?>
+```
+#### output:
+```
+1275
+```
+### 5️⃣ Create an array of five colors and use `foreach` to print each color.
+#### Ans:
+```php
+<?PHP
+$color = array('red','green','blue','gray','pink');
+foreach ($color as $colors) {
+        echo $colors." ";
+}
+?>
+```
+#### output:
+```
+red green blue gray pink
+```
+### 6️⃣ Write a PHP program using a `foreach` loop to display student names with their marks from an associative array.
+#### Ans:
+```php
+<?PHP
+$studinfo = array('ankit'=>75,'deepak'=>70,'anuska'=>85,'timmi'=>90,'zebun'=>87);
+foreach ($studinfo as $key => $value) {
+        echo "$key : $value <be>";
+}
+?>
+```
+#### output:
+```
+ankit : 75
+deepak : 70
+anuska : 85
+timmi : 90
+zebun : 87
+```
+### 7️⃣ Use a `while` loop to find the factorial of a number.
+#### Ans:
+```php
+<?PHP
+$i=5;
+$rel = 1;
+while ($i>=1){
+      $rel *= $i;
+      $i--;
+}
+echo $rel;
+?>
+```
+#### output:
+```
+120
+```
+### 8️⃣ Write a `do-while` loop that prompts a user for input until they enter a positive number.
+#### Ans:
+```php
+<?PHP
+do {
+	$input = readline("Enter a positive integer: ");
+}while (!is_numeric($input) || $input < 1 || strpos($input, '.') !== false);
+echo "You entered: " . $input;
+?>
+```
+#### output:
+```
+
+```
+### 9️⃣ Use a `for` loop to display the multiplication table of a given number.
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
+```
+### 🔟 Write a PHP script that counts the number of even and odd numbers in an array using a `foreach` loop.
+#### Ans:
+```php
+<?PHP
+?>
+```
+#### output:
+```
+
 ```
