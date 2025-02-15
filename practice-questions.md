@@ -765,51 +765,85 @@ Array
 #### Ans:
 ```php
 <?PHP
-
+function multiply($a, $b) {
+     return $a * $b;
+  }
+    
+$mult = multiply(5, 10);
+echo "multiple: $mult";
 ?>
 ```
 #### output:
 ```
+multiplye: 50
 ```
 ### 2️⃣ Create a function `isEven()` that checks if a number is even and returns true or false.
 #### Ans:
 ```php
 <?PHP
-
+function isEven($a) {
+     if ($a %2 ==0){
+       return "True";
+     }else{
+       return "False";
+     }
+}    
+echo isEven(2)." ";
+echo isEven(3)." ";
+echo isEven(5);
 ?>
 ```
 #### output:
 ```
+True False False
 ```
 ### 3️⃣ Write a function `calculateArea()` that takes length and width and returns the area of a rectangle.
 #### Ans:
 ```php
 <?PHP
-
+function calculateArea($len,$wid) {
+        $area = $len * $wid;
+        return $area;
+    }
+    $length = 5;
+    $width = 4;
+    $result =calculateArea($length,$width);
+    echo "The area of rectangel is:".$result;
 ?>
 ```
 #### output:
 ```
+The area of rectangel is:20
 ```
 ### 4️⃣ Write a function `greetUser()` that takes a username as input and returns "Welcome, [username]!".
 #### Ans:
 ```php
 <?PHP
-
+function greetUser($name) {
+        return "Welcome, $name!";
+    }
+    $input = readline("Enter the unser name: ");
+    echo greetUser($input);
 ?>
 ```
 #### output:
 ```
+Enter the unser name: Antish kumar
+
+Welcome, Antish kumar!
 ```
 ### 5️⃣ Use `isset()` to check if a variable $email is set before printing it.
 #### Ans:
 ```php
 <?PHP
+$email = 'ankit@gmail.com';
+echo isset($email) ? 'email is :'.$email : 'not set';
 
 ?>
 ```
 #### output:
 ```
+email is : ankit@gmail.com
 ```
 ### 6️⃣ Use `empty()` to check if a variable $password is empty.
 #### Ans:
