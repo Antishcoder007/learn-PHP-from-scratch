@@ -849,31 +849,56 @@ email is : ankit@gmail.com
 #### Ans:
 ```php
 <?PHP
-
+$var ="";
+echo empty($var) ? "empty var" : "not empty";
 ?>
 ```
 #### output:
 ```
+empty var
 ```
 ### 7️⃣ Use `var_dump()` to debug an array of student names.
 #### Ans:
 ```php
 <?PHP
+$var =array("ankit","rahul","ritu","ankita");
+var_dump($var);
 
 ?>
 ```
 #### output:
 ```
+array(4) {
+  [0]=>
+  string(5) "ankit"
+  [1]=>
+  string(5) "rahul"
+  [2]=>
+  string(4) "ritu"
+  [3]=>
+  string(6) "ankita"
+}
 ```
 ### 8️⃣ Write a function `reverseString()` that takes a string and returns the reversed version of it.
 #### Ans:
 ```php
 <?PHP
+function reverseString($str){
+    $len = strlen($str);
+    for($len;$len>=0;$len--){
+        echo ($str[$len]);
+    }
+}
 
+$str = readline("enter the string: ");
+reverseString($str);
 ?>
 ```
 #### output:
 ```
+enter the string: php programming
+
+gnimmargorp php
 ```
 ### 9️⃣ Create a function `convertToUpperCase()` that takes a string and converts it to uppercase.
 #### Ans:
@@ -889,9 +914,37 @@ email is : ankit@gmail.com
 #### Ans:
 ```php
 <?PHP
+function findLargest($num){
+    $max=$num[0];
+    for($i=1;$i<5;$i++){
+        if ($max < $num[$i]){
+            $max = $num[$i];
+        }
+    }
+    return $max;
+}
+$arr =[];
+echo ("enter 5 numbers\n");
+for ($i = 0;$i<5;$i++){
+    $num = readline("enter" .($i+1)." number: ");
+    array_push($arr,$num);
+}
 
+echo findLargest($arr);
 ?>
 ```
 #### output:
 ```
+enter 5 numbers
+enter1 number: 123
+
+enter2 number: 4
+
+enter3 number: 5
+
+enter4 number: 6
+
+enter5 number: 7
+
+123
 ```
