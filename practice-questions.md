@@ -525,32 +525,67 @@ echo $rel;
 ```php
 <?PHP
 do {
-	$input = readline("Enter a positive integer: ");
-}while (!is_numeric($input) || $input < 1 || strpos($input, '.') !== false);
+$input = readline("Enter aa integer: ");
+}while ($input < 1);
 echo "You entered: " . $input;
 ?>
 ```
 #### output:
 ```
+Enter an integer: -6
+Enter an integer: -4
+Enter an integer: -7
+Enter an integer: -2
+Enter an integer: -4
+Enter an integer:  6
 
+You entered: 6
 ```
 ### 9️⃣ Use a `for` loop to display the multiplication table of a given number.
 #### Ans:
 ```php
 <?PHP
+$input = readline("enter the number: ");
+for($i =1;$i<=10;$i++){
+  
+  echo "$input x $i =".$input*$i."\n";
+}
 ?>
 ```
 #### output:
 ```
+enter the number: 6
 
+6 x 1 =6
+6 x 2 =12
+6 x 3 =18
+6 x 4 =24
+6 x 5 =30
+6 x 6 =36
+6 x 7 =42
+6 x 8 =48
+6 x 9 =54
+6 x 10 =60
 ```
 ### 🔟 Write a PHP script that counts the number of even and odd numbers in an array using a `foreach` loop.
 #### Ans:
 ```php
 <?PHP
+$numarr = array(1,4,3,2,5,6,7,8,9,11,15,13,16,31);
+$odd=0;
+$even=0;
+foreach($numarr as $val){
+  if($val % 2 == 0){
+    $odd+=1;
+  }else{
+    $even+=1;
+  }
+}
+echo ("The number of even: $even \n The number of odd: $odd ");
 ?>
 ```
 #### output:
 ```
-
+The number of even: 5 
+The number of odd: 9
 ```
