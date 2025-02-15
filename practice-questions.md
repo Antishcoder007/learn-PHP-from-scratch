@@ -591,7 +591,8 @@ The number of odd: 9
 ```
 ---
 ---
-# ✅ Practice Questions
+# Day 6️⃣ 
+## ✅ Practice Questions
 ### 1️⃣ Create an indexed array of five cities and print all cities using a foreach loop.
 #### Ans:
 ```php
@@ -646,7 +647,7 @@ Name : Mobile, Price : 10000, Quantity : 20
 Name : Toy car, Price : 1500, Quantity : 50
 Name : Ankelet, Price : 500, Quantity : 100
 ```
-### 4️⃣ Use array_push() to add two elements to an array.
+### 4️⃣ Use `array_push()` to add two elements to an array.
 #### Ans:
 ```php
 <?PHP
@@ -665,7 +666,7 @@ before modifyArray
 After modifyArray
 (  [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 )
 ```
-### 5️⃣ Use array_pop() to remove the last element of an array.
+### 5️⃣ Use `array_pop()` to remove the last element of an array.
 #### Ans:
 ```php
 <?PHP
@@ -684,7 +685,7 @@ before modifyArray
 After modifyArray
 (  [0] => 1 [1] => 2 [2] => 3 )
 ```
-### 6️⃣ Use count() to display the number of elements in an array.
+### 6️⃣ Use `count()` to display the number of elements in an array.
 #### Ans:
 ```php
 <?PHP
@@ -696,7 +697,7 @@ echo (count($product));
 ```
 4
 ```
-### 7️⃣ Use sort() to sort an array of five numbers in ascending order.
+### 7️⃣ Use `sort()` to sort an array of five numbers in ascending order.
 #### Ans:
 ```php
 <?PHP
@@ -710,7 +711,7 @@ print_r($product);
 Array
 ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
 ```
-### 8️⃣ Convert the string "PHP,HTML,CSS,JavaScript" into an array using explode().
+### 8️⃣ Convert the string "PHP,HTML,CSS,JavaScript" into an array using `explode()`.
 #### Ans:
 ```php
 <?PHP
@@ -755,4 +756,108 @@ print_r($margedarr);
 ```
 Array
 (  [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [8] => 6 [9] => 7 [13] => 8 [15] => 9  )
+```
+---
+---
+# Day 6️⃣
+## ✅ Practice Questions
+### 1️⃣ Write a function `multiply()` that takes two numbers and returns their product.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 2️⃣ Create a function `isEven()` that checks if a number is even and returns true or false.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 3️⃣ Write a function `calculateArea()` that takes length and width and returns the area of a rectangle.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 4️⃣ Write a function `greetUser()` that takes a username as input and returns "Welcome, [username]!".
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 5️⃣ Use `isset()` to check if a variable $email is set before printing it.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 6️⃣ Use `empty()` to check if a variable $password is empty.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 7️⃣ Use `var_dump()` to debug an array of student names.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 8️⃣ Write a function `reverseString()` that takes a string and returns the reversed version of it.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 9️⃣ Create a function `convertToUpperCase()` that takes a string and converts it to uppercase.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 🔟 Write a function `findLargest()` that takes an array of numbers and returns the largest number.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
 ```
