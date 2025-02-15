@@ -36,13 +36,13 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 - [`if`](#-if-statement), [`else`](#-if-else-statement), [`elseif`](#-if-elseif-else-statement)
 - [`switch`](#2-switch-statement) statements
 
-### **[Day 5](): Loops**
-- `for`, `while`, `do-while`
-- `foreach` for arrays
+### **[Day 5](#-day-5-loops-in-php): Loops**
+- [`for`](#-1%EF%B8%8F⃣-for-loop), [`while`](#-2%EF%B8%8F⃣-while-loop), [`do-while`](#-3%EF%B8%8F⃣-do-while-loop)
+- [`foreach`](#-4%EF%B8%8F⃣-foreach-loop-for-arrays) for arrays
 
-### **Day 6: Arrays**
-- Indexed, Associative, and Multidimensional arrays
-- Array functions *(array_push(), array_pop(), count(), sort(), explode())*
+### **[Day 6: Arrays](#day-6-arrays-in-php-)**
+- [`Indexed`](#-indexed-arrays-numeric-keys), [`Associative`](#-associative-arrays-key-value-pairs), and [`Multidimensional`](#-multidimensional-arrays-arrays-inside-arrays) arrays
+- Array functions *([`array_push()`](#-adding-elements-array_push), [`array_pop()`](#-removing-last-element-array_pop), [`count()`](#-counting-elements-count), [`sort()`](#-sorting-an-array-sort), [`explode()`](#-converting-string-to-array-explode))*
 
 ### **Day 7: Functions in PHP**
 - Defining and calling functions
