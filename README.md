@@ -44,10 +44,10 @@ Welcome to the **PHP Learning Roadmap**! This guide is designed to help you mast
 - [`Indexed`](#-indexed-arrays-numeric-keys), [`Associative`](#-associative-arrays-key-value-pairs), and [`Multidimensional`](#-multidimensional-arrays-arrays-inside-arrays) arrays
 - Array functions *([`array_push()`](#-adding-elements-array_push), [`array_pop()`](#-removing-last-element-array_pop), [`count()`](#-counting-elements-count), [`sort()`](#-sorting-an-array-sort), [`explode()`](#-converting-string-to-array-explode))*
 
-### **Day 7: Functions in PHP**
-- Defining and calling functions
+### **[Day 7](): Functions in PHP**
+- Defining and [`calling`]() functions
 - Function parameters and return values
-- Built-in PHP functions *(isset(), empty(), var_dump())*
+- Built-in PHP functions *([`isset()`](), [`empty()`](), [`var_dump()`]())*
 
 ---
 ## 📅 Week 2: Intermediate PHP
@@ -971,3 +971,440 @@ Array ( [0] => Apple [1] => Banana [2] => Cherry )
 📌 **Next Step:** Explore **array_merge()**, **array_filter()**, and advanced PHP array functions. Stay tuned for Day 7! 🚀
 
 📢 **Follow me on GitHub for more updates!** 😃
+---
+---
+# Day 7: Functions in PHP
+
+## 📌 Introduction
+Functions in PHP allow you to write reusable blocks of code, making your programs more efficient and modular. They help organize logic, reduce redundancy, and improve code readability.
+
+---
+
+## 🔹 Defining and Calling Functions
+A function is a block of code that runs only when it is called.
+
+### ✅ Syntax
+```php
+function functionName() {
+    // Code to be executed
+}
+```
+
+### ✅ Example: Creating and Calling a Function
+```php
+<?php
+    function sayHello() {
+        echo "Hello, PHP! <br>";
+    }
+    
+    sayHello(); // Function Call
+?>
+```
+#### 🖥 Output:
+```
+Hello, PHP!
+```
+
+---
+
+## 🔹 Function Parameters and Return Values
+
+### ✅ Passing Parameters to Functions
+```php
+<?php
+    function greet($name) {
+        echo "Hello, $name! <br>";
+    }
+    
+    greet("Alice"); // Output: Hello, Alice!
+    greet("Bob");   // Output: Hello, Bob!
+?>
+```
+
+### ✅ Default Parameter Values
+```php
+<?php
+    function greet($name = "Guest") {
+        echo "Hello, $name! <br>";
+    }
+    
+    greet();        // Output: Hello, Guest!
+    greet("David"); // Output: Hello, David!
+?>
+```
+
+### ✅ Returning Values from a Function
+```php
+<?php
+    function add($a, $b) {
+        return $a + $b;
+    }
+    
+    $sum = add(5, 10);
+    echo "Sum: $sum"; // Output: Sum: 15
+?>
+```
+
+---
+
+## 🔹 Built-in PHP Functions
+PHP provides many built-in functions to perform common operations.
+
+### ✅ `isset()` – Check if a Variable is Set
+```php
+<?php
+    $name = "Alice";
+    echo isset($name) ? "Variable is set" : "Variable is not set";
+    // Output: Variable is set
+?>
+```
+
+### ✅ `empty()` – Check if a Variable is Empty
+```php
+<?php
+    $var = "";
+    echo empty($var) ? "Variable is empty" : "Variable is not empty";
+    // Output: Variable is empty
+?>
+```
+
+### ✅ `var_dump()` – Print Detailed Variable Information
+```php
+<?php
+    $num = 10;
+    $text = "Hello";
+    $arr = array(1, 2, 3);
+
+    var_dump($num);
+    var_dump($text);
+    var_dump($arr);
+?>
+```
+#### 🖥 Output:
+```
+int(10)  
+string(5) "Hello"  
+array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+```
+
+---
+---
+---
+# 📌 Day 8: Strings and String Functions in PHP
+
+## 🔥 Introduction
+Strings are a fundamental part of PHP and are used to store and manipulate text. PHP provides several built-in functions to work with strings effectively. Let's explore some of the most commonly used string functions!
+
+---
+
+## 1️⃣ Important String Functions in PHP
+
+### 📌 `strlen()` – Get the Length of a String
+The `strlen()` function returns the number of characters in a string, including spaces.
+
+```php
+<?php
+    $text = "Hello, PHP!";
+    echo strlen($text); // Output: 11
+?>
+```
+
+### 📌 `str_replace()` – Replace Substrings in a String
+The `str_replace()` function replaces occurrences of a substring with another string.
+
+```php
+<?php
+    $text = "I love PHP!";
+    $newText = str_replace("PHP", "Python", $text);
+    echo $newText; // Output: I love Python!
+?>
+```
+
+### 📌 `substr()` – Extract a Part of a String
+The `substr()` function extracts a portion of a string.
+
+```php
+<?php
+    $text = "Hello, World!";
+    echo substr($text, 0, 5);  // Output: Hello
+    echo substr($text, -6);    // Output: World!
+?>
+```
+
+### 📌 `explode()` – Split a String into an Array
+The `explode()` function splits a string into an array based on a delimiter.
+
+```php
+<?php
+    $text = "apple,banana,grape";
+    $fruits = explode(",", $text);
+    print_r($fruits);
+?>
+```
+
+📌 **Output:**
+```
+Array ( [0] => apple [1] => banana [2] => grape )
+```
+
+### 📌 `trim()` – Remove Spaces from the Beginning and End
+The `trim()` function removes whitespace (spaces, newlines, tabs) from the start and end of a string.
+
+```php
+<?php
+    $text = "  Hello, World!  ";
+    echo trim($text); // Output: "Hello, World!"
+?>
+```
+
+---
+
+## 2️⃣ Practice: Reverse a String
+Write a function to reverse a string using `strrev()`.
+
+```php
+<?php
+    function reverseString($str) {
+        return strrev($str);
+    }
+
+    echo reverseString("PHP"); // Output: PHP
+?>
+```
+
+---
+---
+# **Day 9: Forms and User Input Handling in PHP**
+
+Forms are an essential part of web development, allowing users to interact with a website by submitting data. PHP provides two primary methods for handling form data: **$_GET** and **$_POST**.
+
+---
+
+## 1. $_GET vs $_POST
+
+### $_GET Method
+- Sends form data as URL parameters (visible in the browser).
+- Best for search queries, filtering, and retrieving data.
+- Not secure for sensitive data like passwords.
+- Has a character limit (~2048 characters).
+
+**Example:**
+```php
+<form method="GET" action="process.php">
+    Name: <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+```
+**Processing in PHP (process.php):**
+```php
+<?php
+    if(isset($_GET['username'])){
+        echo "Hello, " . $_GET['username'];
+    }
+?>
+```
+📌 **URL Example:** `process.php?username=John`
+
+---
+
+### $_POST Method
+- Sends form data in the request body (hidden from the URL).
+- Used for login forms, user registration, and secure data submissions.
+- No size limit on data.
+- More secure than $_GET.
+
+**Example:**
+```php
+<form method="POST" action="process.php">
+    Name: <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+```
+**Processing in PHP (process.php):**
+```php
+<?php
+    if(isset($_POST['username'])){
+        echo "Hello, " . $_POST['username'];
+    }
+?>
+```
+📌 **Data is not visible in the URL.**
+
+---
+
+## 2. Handling Form Data Securely
+To prevent security vulnerabilities like **XSS (Cross-Site Scripting)** and **SQL Injection**, it's crucial to validate and sanitize user input.
+
+### Validate User Input
+Ensure input fields are not empty and follow the required format.
+```php
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["username"])) {
+            echo "Name is required!";
+        } else {
+            echo "Hello, " . htmlspecialchars($_POST["username"]);
+        }
+    }
+?>
+```
+📌 `htmlspecialchars()` prevents **XSS attacks** by converting HTML characters.
+
+---
+
+### Secure Form Submission
+Use `trim()`, `htmlspecialchars()`, and `stripslashes()` to sanitize input.
+```php
+<?php
+    function sanitize_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = sanitize_input($_POST["username"]);
+        echo "Hello, " . $name;
+    }
+?>
+```
+📌 **Prevents malicious code injection.**
+
+---
+
+### Use Prepared Statements for Database Security
+If storing form data in a database, avoid **SQL Injection** by using **prepared statements**.
+```php
+<?php
+    $conn = new mysqli("localhost", "root", "", "test_db");
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $stmt = $conn->prepare("INSERT INTO users (name) VALUES (?)");
+    $stmt->bind_param("s", $name);
+    
+    $name = sanitize_input($_POST["username"]);
+    $stmt->execute();
+    
+    echo "Data inserted successfully!";
+    
+    $stmt->close();
+    $conn->close();
+?>
+```
+📌 **Prevents SQL Injection attacks.**
+
+---
+---
+# Day 10: Superglobals in PHP
+
+## Overview
+Superglobals are built-in PHP variables that are accessible from anywhere in a script. They store useful information about server settings, user inputs, and file uploads. Today, we will focus on three important superglobals:
+
+- `$_SERVER`: Provides information about the server and execution environment.
+- `$_FILES`: Handles file uploads.
+- `$_REQUEST`: Collects form data from both `$_GET` and `$_POST`.
+
+---
+
+## 1️⃣ $_SERVER: Server and Execution Environment Information
+The `$_SERVER` superglobal holds details about headers, paths, and script execution.
+
+### Commonly Used `$_SERVER` Variables
+| Variable | Description |
+|----------|------------|
+| `$_SERVER['PHP_SELF']` | Returns the filename of the executing script |
+| `$_SERVER['SERVER_NAME']` | Returns the server's hostname |
+| `$_SERVER['HTTP_HOST']` | Returns the host header from the request |
+| `$_SERVER['REQUEST_METHOD']` | Returns the request method (GET, POST, etc.) |
+| `$_SERVER['REMOTE_ADDR']` | Returns the user's IP address |
+| `$_SERVER['HTTP_USER_AGENT']` | Returns details about the user’s browser |
+
+### Example Usage
+```php
+<?php
+    echo "Script Name: " . $_SERVER['PHP_SELF'] . "<br>";
+    echo "Server Name: " . $_SERVER['SERVER_NAME'] . "<br>";
+    echo "Request Method: " . $_SERVER['REQUEST_METHOD'] . "<br>";
+    echo "User IP Address: " . $_SERVER['REMOTE_ADDR'] . "<br>";
+    echo "User Browser: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
+?>
+```
+📌 **Use Case:** `$_SERVER['REQUEST_METHOD']` helps determine whether a form was submitted via GET or POST.
+
+---
+
+## 2️⃣ $_FILES: Handling File Uploads
+The `$_FILES` superglobal allows users to upload files via PHP.
+
+### Steps to Handle File Uploads
+1. **Create an HTML form** with `enctype="multipart/form-data"`:
+```html
+<form action="upload.php" method="POST" enctype="multipart/form-data">
+    Select file: <input type="file" name="uploadedFile">
+    <input type="submit" value="Upload">
+</form>
+```
+
+2. **Process the uploaded file in PHP (`upload.php`)**:
+```php
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_FILES["uploadedFile"])) {
+            $file_name = $_FILES["uploadedFile"]["name"];
+            $file_tmp = $_FILES["uploadedFile"]["tmp_name"];
+            $upload_dir = "uploads/";
+
+            if (move_uploaded_file($file_tmp, $upload_dir . $file_name)) {
+                echo "File uploaded successfully!";
+            } else {
+                echo "File upload failed.";
+            }
+        }
+    }
+?>
+```
+
+### Understanding `$_FILES` Properties
+| Property | Description |
+|----------|------------|
+| `$_FILES['uploadedFile']['name']` | Original file name |
+| `$_FILES['uploadedFile']['tmp_name']` | Temporary location of the file |
+| `$_FILES['uploadedFile']['size']` | Size of the uploaded file (bytes) |
+| `$_FILES['uploadedFile']['type']` | MIME type of the uploaded file |
+| `$_FILES['uploadedFile']['error']` | Error code (`0` = no error) |
+
+📌 **Use Case:** Used for uploading profile pictures, documents, or media files.
+
+---
+
+## 3️⃣ $_REQUEST: Collecting Form Data
+The `$_REQUEST` superglobal retrieves data from both `$_GET` and `$_POST`.
+
+### Example Usage
+#### **HTML Form**
+```html
+<form method="POST" action="process.php">
+    Name: <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+```
+
+#### **Processing Data (`process.php`)**
+```php
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "Hello, " . $_REQUEST["username"];
+    }
+?>
+```
+
+⚠️ **Note:**
+- `$_REQUEST` **combines** `$_GET` and `$_POST` data, which may lead to security risks.
+- It’s recommended to **use `$_POST` for sensitive data** instead.
+
+---
+---
