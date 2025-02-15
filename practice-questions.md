@@ -589,3 +589,170 @@ echo ("The number of even: $even \n The number of odd: $odd ");
 The number of even: 5 
 The number of odd: 9
 ```
+---
+---
+# ✅ Practice Questions
+### 1️⃣ Create an indexed array of five cities and print all cities using a foreach loop.
+#### Ans:
+```php
+<?PHP
+$city = array("Delhi","Jaipur","Pune","Banglore","Bhopal");
+foreach($city as $i){
+    echo $i."\n";
+}
+?>
+```
+#### output:
+```
+Delhi
+Jaipur
+Pune
+Banglore
+Bhopal
+```
+### 2️⃣ Create an associative array of a student's details (Name, Age, Course) and print them.
+#### Ans:
+```php
+<?PHP
+$city = array("Name"=>"Ankit", "Age"=>23, "Course"=>"Mca");
+foreach ($city as $key => $value){
+    echo "$key : $value\n";
+}
+?>
+```
+#### output:
+```
+Name : Ankit
+Age : 23
+Course : Mca
+```
+### 3️⃣ Create a multidimensional array of 3 products with Name, Price, and Quantity. Print all products.
+#### Ans:
+```php
+<?PHP
+$product = array(
+    array("Mobile", 10000, 20),
+    array("Toy car", 1500, 50),
+    array("Ankelet", 500, 100)
+);
+foreach ($product as $products){
+    echo "Name : $products[0], Price : $products[1], Quantity : $products[2]\n";
+}
+?>
+```
+#### output:
+```
+Name : Mobile, Price : 10000, Quantity : 20
+Name : Toy car, Price : 1500, Quantity : 50
+Name : Ankelet, Price : 500, Quantity : 100
+```
+### 4️⃣ Use array_push() to add two elements to an array.
+#### Ans:
+```php
+<?PHP
+$product = array(1,2,3,4);
+echo "before modify";
+print_r($product);
+array_push($product,5,6);
+echo "After modify";
+print_r($product);
+?>
+```
+#### output:
+```
+before modifyArray
+(  [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
+After modifyArray
+(  [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 )
+```
+### 5️⃣ Use array_pop() to remove the last element of an array.
+#### Ans:
+```php
+<?PHP
+$product = array(1,2,3,4);
+echo "before modify";
+print_r($product);
+array_pop($product);
+echo "After modify";
+print_r($product);
+?>
+```
+#### output:
+```
+before modifyArray
+(  [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
+After modifyArray
+(  [0] => 1 [1] => 2 [2] => 3 )
+```
+### 6️⃣ Use count() to display the number of elements in an array.
+#### Ans:
+```php
+<?PHP
+$product = array(1,2,3,4);
+echo (count($product));
+?>
+```
+#### output:
+```
+4
+```
+### 7️⃣ Use sort() to sort an array of five numbers in ascending order.
+#### Ans:
+```php
+<?PHP
+$product = array(2,1,4,3);
+sort($product);
+print_r($product);
+?>
+```
+#### output:
+```
+Array
+( [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
+```
+### 8️⃣ Convert the string "PHP,HTML,CSS,JavaScript" into an array using explode().
+#### Ans:
+```php
+<?PHP
+$text = "Php,HTML,CSS,JavaScript";
+$language = explode(",", $text);
+print_r($language);
+?>
+```
+#### output:
+```
+Array
+(  [0] => Php [1] => HTML [2] => CSS [3] => JavaScript  )
+```
+### 9️⃣ Write a script to check if a key exists in an associative array.
+#### Ans:
+```php
+<?PHP
+$city = array("Name"=>"Ankit", "Age"=>23, "Course"=>"Mca");
+
+if(array_key_exists("Age",$city)){
+    echo "the Age key is exist";
+}else{
+    echo "no Age key exist";
+}
+?>
+```
+#### output:
+```
+the Age key is exist
+```
+### 🔟 Write a script to merge two arrays and remove duplicate values.
+#### Ans:
+```php
+<?PHP
+$arr1 = array(1,2,3,4,5,2,4,3,6);
+$arr2 = array(7,6,3,4,8,1,9,2,5);
+$margedarr=array_unique(array_merge($arr1,$arr2));
+print_r($margedarr);
+?>
+```
+#### output:
+```
+Array
+(  [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [8] => 6 [9] => 7 [13] => 8 [15] => 9  )
+```
