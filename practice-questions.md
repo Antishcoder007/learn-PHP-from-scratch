@@ -759,7 +759,7 @@ Array
 ```
 ---
 ---
-# Day 6️⃣
+# Day 7️⃣
 ## ✅ Practice Questions
 ### 1️⃣ Write a function `multiply()` that takes two numbers and returns their product.
 #### Ans:
@@ -904,11 +904,19 @@ gnimmargorp php
 #### Ans:
 ```php
 <?PHP
-
+function convertToUpperCase($str){
+         echo strtoupper($str);
+	}
+	
+$input = readline("enter the string: ");
+convertToUpperCase($input);
 ?>
 ```
 #### output:
 ```
+enter the string: Php language is easy to learn
+
+PHP LANGUAGE IS EASY TO LEARN
 ```
 ### 🔟 Write a function `findLargest()` that takes an array of numbers and returns the largest number.
 #### Ans:
@@ -947,4 +955,118 @@ enter4 number: 6
 enter5 number: 7
 
 123
+```
+
+---
+---
+# Day 8️⃣
+## ✅ Practice Questions
+
+1️⃣ Write a function to check if a string contains a specific word using `strpos()`.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+2️⃣ Use `strtoupper()` to convert a string to uppercase.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+3️⃣ Use `strtolower()` to convert a string to lowercase.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+4️⃣ Replace "bad" with "good" in the sentence: "This is a bad day!".
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+5️⃣ Extract "World" from "Hello, World!" using `substr()`.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+6️⃣ Convert "one,two,three" into an array using `explode()`.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+7️⃣ Trim the spaces from the string " Hello, PHP! ".
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+8️⃣ Write a function to check if a string starts with a specific letter.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+9️⃣ Reverse a string without using `strrev()`.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+
+🔟 Concatenate two strings and find the total length using `strlen()`.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
 ```
