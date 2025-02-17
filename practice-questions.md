@@ -962,7 +962,7 @@ enter5 number: 7
 # Day 8️⃣
 ## ✅ Practice Questions
 
-1️⃣ Write a function to check if a string contains a specific word using `strpos()`.
+### 1️⃣ Write a function to check if a string contains a specific word using `strpos()`.
 #### Ans:
 ```php
 <?PHP
@@ -974,7 +974,7 @@ echo (strpos($address,"Malvi"));
 ```
 10
 ```
-2️⃣ Use `strtoupper()` to convert a string to uppercase.
+### 2️⃣ Use `strtoupper()` to convert a string to uppercase.
 #### Ans:
 ```php
 <?PHP
@@ -987,7 +987,7 @@ echo (strtoupper($address));
 HO NO 104 MALVI NAGAR DELHI INDIA
 ```
 
-3️⃣ Use `strtolower()` to convert a string to lowercase.
+### 3️⃣ Use `strtolower()` to convert a string to lowercase.
 #### Ans:
 ```php
 <?PHP
@@ -1000,7 +1000,7 @@ echo (strtolower($address));
 ho no 104 malvi nagar delhi india
 ```
 
-4️⃣ Replace "bad" with "good" in the sentence: "This is a bad day!".
+### 4️⃣ Replace "bad" with "good" in the sentence: "This is a bad day!".
 #### Ans:
 ```php
 <?PHP
@@ -1013,7 +1013,7 @@ echo (str_replace("bad","Good",$address));
 This is a Good day!
 ```
 
-5️⃣ Extract "World" from "Hello, World!" using `substr()`.
+### 5️⃣ Extract "World" from "Hello, World!" using `substr()`.
 #### Ans:
 ```php
 <?PHP
@@ -1026,7 +1026,7 @@ echo (substr($address,7,5));
 world
 ```
 
-6️⃣ Convert "one,two,three" into an array using `explode()`.
+### 6️⃣ Convert "one,two,three" into an array using `explode()`.
 #### Ans:
 ```php
 <?PHP
@@ -1044,7 +1044,7 @@ Array
 )
 ```
 
-7️⃣ Trim the spaces from the string " Hello, PHP! ".
+### 7️⃣ Trim the spaces from the string " Hello, PHP! ".
 #### Ans:
 ```php
 <?PHP
@@ -1057,7 +1057,7 @@ echo (trim($str));
 Hello, PHP!
 ```
 
-8️⃣ Concatenate two strings and find the total length using `strlen()`.
+### 8️⃣ Concatenate two strings and find the total length using `strlen()`.
 #### Ans:
 ```php
 <?PHP
@@ -1072,4 +1072,56 @@ echo (strlen($str3));
 ```
 Hello World!
 12
+```
+---
+
+## ✅ Practice Questions
+### 1️⃣ Create a login form using POST with username and password validation.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 2️⃣ Create a search bar using GET that retrieves user input and displays it.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 3️⃣ Validate if a form field is empty before submitting.
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 4️⃣ Sanitize input using htmlspecialchars() and trim().
+#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
+```
+### 5️⃣ Implement form handling with database insertion using prepared statements.#### Ans:
+```php
+<?PHP
+
+?>
+```
+#### output:
+```
 ```
