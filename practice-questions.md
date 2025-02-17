@@ -1078,50 +1078,56 @@ Hello World!
 ## ✅ Practice Questions
 ### 1️⃣ Create a login form using POST with username and password validation.
 #### Ans:
-```php
-<?PHP
+```html
+<form method="POST" action="">
+	<input type="text" name="username" placeholder="Username" required>
+    <br>
+	<input type="password" name="password" placeholder="Password" required>		
+    <br>
+	<button type="submit" name="btn">Login</button>
+</form>
 
+<?php
+$u_name ='Admin';
+$u_pass ='Admin123';
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+	$Uname = $_POST['username'];
+    $Upass = $_POST['password'];
+    
+    if ($Uname === $u_name && $Upass === $u_pass){
+        echo "Valid User :".$Uname;
+    }else{
+        echo "Invalid user";
+    }
+}
 ?>
 ```
 #### output:
 ```
+username: Admin
+password  Admin123
+
+Valid User :Admin
 ```
 ### 2️⃣ Create a search bar using GET that retrieves user input and displays it.
 #### Ans:
 ```php
 <?PHP
+<form method="GET" action="">
+    <input type="search" name="search">
+</form>
 
+<?php
+if($_SERVER["REQUEST_METHOD"] == "GET"){
+	$Usearch = $_GET['search'];
+    echo "User is searching for: ".$Usearch;
+}
 ?>
 ```
 #### output:
 ```
-```
-### 3️⃣ Validate if a form field is empty before submitting.
-#### Ans:
-```php
-<?PHP
+Search Bat
 
-?>
-```
-#### output:
-```
-```
-### 4️⃣ Sanitize input using htmlspecialchars() and trim().
-#### Ans:
-```php
-<?PHP
-
-?>
-```
-#### output:
-```
-```
-### 5️⃣ Implement form handling with database insertion using prepared statements.#### Ans:
-```php
-<?PHP
-
-?>
-```
-#### output:
-```
+User is searching for: Bat
 ```
