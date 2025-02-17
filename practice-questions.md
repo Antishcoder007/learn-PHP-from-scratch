@@ -966,107 +966,110 @@ enter5 number: 7
 #### Ans:
 ```php
 <?PHP
-
+$address = "ho no 104 Malvi nagar delhi India";
+echo (strpos($address,"Malvi"));
 ?>
 ```
 #### output:
 ```
+10
 ```
 2️⃣ Use `strtoupper()` to convert a string to uppercase.
 #### Ans:
 ```php
 <?PHP
-
+$address = "ho no 104 Malvi nagar delhi India";
+echo (strtoupper($address));
 ?>
 ```
 #### output:
 ```
+HO NO 104 MALVI NAGAR DELHI INDIA
 ```
 
 3️⃣ Use `strtolower()` to convert a string to lowercase.
 #### Ans:
 ```php
 <?PHP
-
+$address = "Ho No 104 Malvi Nagar Delhi India";
+echo (strtolower($address));
 ?>
 ```
 #### output:
 ```
+ho no 104 malvi nagar delhi india
 ```
 
 4️⃣ Replace "bad" with "good" in the sentence: "This is a bad day!".
 #### Ans:
 ```php
 <?PHP
-
+$address = "This is a bad day!";
+echo (str_replace("bad","Good",$address));
 ?>
 ```
 #### output:
 ```
+This is a Good day!
 ```
 
 5️⃣ Extract "World" from "Hello, World!" using `substr()`.
 #### Ans:
 ```php
 <?PHP
-
+$address = "Hello, world!";
+echo (substr($address,7,5));
 ?>
 ```
 #### output:
 ```
+world
 ```
 
 6️⃣ Convert "one,two,three" into an array using `explode()`.
 #### Ans:
 ```php
 <?PHP
-
+$str = "one,two,three";
+print_r (explode(",",$str));
 ?>
 ```
 #### output:
 ```
+Array
+(
+    [0] => one
+    [1] => two
+    [2] => three
+)
 ```
 
 7️⃣ Trim the spaces from the string " Hello, PHP! ".
 #### Ans:
 ```php
 <?PHP
-
+$str = " Hello, PHP! ";
+echo (trim($str));
 ?>
 ```
 #### output:
 ```
+Hello, PHP!
 ```
 
-8️⃣ Write a function to check if a string starts with a specific letter.
+8️⃣ Concatenate two strings and find the total length using `strlen()`.
 #### Ans:
 ```php
 <?PHP
-
+$str1 = "Hello";
+$str2 = " World!";
+$str3 = $str1 . $str2;
+echo $str3."<br>";
+echo (strlen($str3));
 ?>
 ```
 #### output:
 ```
-```
-
-9️⃣ Reverse a string without using `strrev()`.
-#### Ans:
-```php
-<?PHP
-
-?>
-```
-#### output:
-```
-```
-
-🔟 Concatenate two strings and find the total length using `strlen()`.
-#### Ans:
-```php
-<?PHP
-
-?>
-```
-#### output:
-```
+Hello World!
+12
 ```
